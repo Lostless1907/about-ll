@@ -501,6 +501,23 @@ header {
   will-change: transform;
 }
 
+.hero-quote {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--on-surface-variant);
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(168, 199, 250, 0.2));
+  animation: fadeIn var(--motion-duration-long2) var(--motion-easing-emphasized-decelerate) both;
+}
+
 @media (max-width: 767px) {
   .hero-bg-philosophy {
     font-size: 18px;
@@ -510,6 +527,14 @@ header {
 
   .hero-3d-logo {
     width: 240px;
+  }
+
+  .hero-quote {
+    font-size: 13px;
+    bottom: 48px;
+    padding: 0 32px;
+    box-sizing: border-box;
+    line-height: 1.4;
   }
 
   .hero-3d-logo-container {
@@ -1689,7 +1714,11 @@ input:checked+.slider:before {
   }
 
   .github-link svg {
-    margin-right: 0;
+    margin-right: 0 !important;
+  }
+
+  .github-link .desktop-text {
+    display: none !important;
   }
 
   .search-container {
